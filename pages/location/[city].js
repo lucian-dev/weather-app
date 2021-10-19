@@ -1,11 +1,11 @@
 import cities from "../../lib/city.list.json";
+import Head from "next/head";
+import Link from "next/link";
+import moment from "moment-timezone";
 import TodaysWeather from "../../components/TodaysWeather";
 import HourlyWeather from "../../components/HourlyWeather";
 import WeeklyWeather from "../../components/WeeklyWeather";
-import Link from "next/link";
-import Head from "next/head";
 import SearchBox from "../../components/SearchBox";
-import moment from "moment-timezone";
 
 export async function getServerSideProps(context) {
   const city = getCity(context.params.city);
@@ -64,6 +64,7 @@ const getHourlyWeather = (hourlyData, timezone) => {
 
   const todaysData = hourlyData.filter((data) => data.dt < eodTimeStamp);
 
+  console.log(endOfDay);
   return todaysData;
 };
 
