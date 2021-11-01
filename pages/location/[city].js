@@ -64,18 +64,10 @@ const getHourlyWeather = (hourlyData, timezone) => {
 
   const todaysData = hourlyData.filter((data) => data.dt < eodTimeStamp);
 
-  console.log(endOfDay);
   return todaysData;
 };
 
-export default function City({
-  city,
-  weather,
-  currentWeather,
-  hourlyWeather,
-  weeklyWeather,
-  timezone,
-}) {
+export default function City({ city, hourlyWeather, weeklyWeather, timezone }) {
   return (
     <div>
       <Head>
