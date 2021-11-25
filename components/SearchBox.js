@@ -39,7 +39,7 @@ export default function SearchBox({ placeholder }) {
       />
       {query.length > 3 && (
         <ul>
-          {results.length > 0 ? (
+          {results ? (
             results.map((city) => (
               <li key={city.slug}>
                 <Link href={`/location/${city.slug}`}>

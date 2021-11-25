@@ -78,7 +78,6 @@ export default function City({ city, hourlyWeather, weeklyWeather, timezone }) {
           <Link href="/">
             <a className="back-link">&larr; Home</a>
           </Link>
-          <SearchBox placeholder="Search another location..." />
           <TodaysWeather
             city={city}
             weather={weeklyWeather[0]}
